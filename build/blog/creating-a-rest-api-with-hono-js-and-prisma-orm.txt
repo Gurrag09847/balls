@@ -1,0 +1,195 @@
+2:I[2200,["746","static/chunks/746-92b327bb6f5043d2.js","308","static/chunks/app/blog/%5Bslug%5D/page-ae472e4be9c83056.js"],"default"]
+4:I[9275,[],""]
+6:I[1343,[],""]
+7:I[8546,["502","static/chunks/502-6cc24f17eb40f474.js","185","static/chunks/app/layout-9a90c48ce4220e65.js"],"ThemeProvider"]
+8:I[2775,["502","static/chunks/502-6cc24f17eb40f474.js","185","static/chunks/app/layout-9a90c48ce4220e65.js"],"default"]
+3:T11b2,
+# Creating a REST API with HonoJS and Prisma ORM
+
+## Introduction
+
+This guide will walk you through the steps to create a REST API using HonoJS and Prisma ORM. HonoJS is a lightweight web framework for Node.js, and Prisma is a modern ORM that simplifies database access.
+
+## Prerequisites
+
+- Node.js installed
+- PostgreSQL or any other supported database installed and running
+- Basic knowledge of JavaScript and Node.js
+
+## Setup
+
+1. **Initialize a new Node.js project**
+
+    ```sh
+    mkdir hono-prisma-api
+    cd hono-prisma-api
+    npm init -y
+    ```
+
+2. **Install required dependencies**
+
+    ```sh
+    npm install hono prisma @prisma/client
+    ```
+
+3. **Initialize Prisma**
+
+    ```sh
+    npx prisma init
+    ```
+
+    This will create a `prisma` folder with a `schema.prisma` file and a `.env` file.
+
+## Configure Prisma
+
+1. **Update the `.env` file**
+
+    Set the `DATABASE_URL` to your database connection string.
+
+    ```env
+    DATABASE_URL="postgresql://user:password@localhost:5432/mydatabase"
+    ```
+
+2. **Define your data model**
+
+    Edit `prisma/schema.prisma` to define your data model. For example:
+
+    ```prisma
+    datasource db {
+      provider = "postgresql"
+      url      = env("DATABASE_URL")
+    }
+
+    generator client {
+      provider = "prisma-client-js"
+    }
+
+    model User {
+      id    Int     @id @default(autoincrement())
+      name  String
+      email String  @unique
+    }
+    ```
+
+3. **Run Prisma migrations**
+
+    ```sh
+    npx prisma migrate dev --name init
+    npx prisma generate
+    ```
+
+## Create the API with HonoJS
+
+1. **Create a basic HonoJS server**
+
+    Create a `server.js` file:
+
+    ```js
+    const { Hono } = require('hono');
+    const { PrismaClient } = require('@prisma/client');
+
+    const app = new Hono();
+    const prisma = new PrismaClient();
+
+    app.get('/', (c) => c.json({ message: 'Hello, HonoJS!' }));
+
+    app.listen(3000, () => {
+      console.log('Server running on http://localhost:3000');
+    });
+    ```
+
+2. **Add CRUD operations**
+
+    Update `server.js` to include CRUD operations:
+
+    ```js
+    const { Hono } = require('hono');
+    const { PrismaClient } = require('@prisma/client');
+
+    const app = new Hono();
+    const prisma = new PrismaClient();
+
+    app.get('/', (c) => c.json({ message: 'Hello, HonoJS!' }));
+
+    app.get('/users', async (c) => {
+      const users = await prisma.user.findMany();
+      return c.json(users);
+    });
+
+    app.get('/users/:id', async (c) => {
+      const { id } = c.req.param();
+      const user = await prisma.user.findUnique({
+        where: { id: parseInt(id) }
+      });
+      return user ? c.json(user) : c.json({ error: 'User not found' }, 404);
+    });
+
+    app.post('/users', async (c) => {
+      const data = await c.req.json();
+      const newUser = await prisma.user.create({ data });
+      return c.json(newUser, 201);
+    });
+
+    app.put('/users/:id', async (c) => {
+      const { id } = c.req.param();
+      const data = await c.req.json();
+      const updatedUser = await prisma.user.update({
+        where: { id: parseInt(id) },
+        data
+      });
+      return c.json(updatedUser);
+    });
+
+    app.delete('/users/:id', async (c) => {
+      const { id } = c.req.param();
+      await prisma.user.delete({
+        where: { id: parseInt(id) }
+      });
+      return c.json({ message: 'User deleted' });
+    });
+
+    app.listen(3000, () => {
+      console.log('Server running on http://localhost:3000');
+    });
+    ```
+
+## Testing the API
+
+You can use tools like Postman or curl to test your API endpoints. Here are some example commands using curl:
+
+- **Get all users**
+
+    ```sh
+    curl http://localhost:3000/users
+    ```
+
+- **Get a user by ID**
+
+    ```sh
+    curl http://localhost:3000/users/1
+    ```
+
+- **Create a new user**
+
+    ```sh
+    curl -X POST http://localhost:3000/users -H "Content-Type: application/json" -d '{"name": "John Doe", "email": "john@example.com"}'
+    ```
+
+- **Update a user**
+
+    ```sh
+    curl -X PUT http://localhost:3000/users/1 -H "Content-Type: application/json" -d '{"name": "John Smith"}'
+    ```
+
+- **Delete a user**
+
+    ```sh
+    curl -X DELETE http://localhost:3000/users/1
+    ```
+
+## Conclusion
+
+You now have a basic REST API using HonoJS and Prisma ORM. You can expand this example by adding more models and routes to fit your application's requirements.5:["slug","creating-a-rest-api-with-hono-js-and-prisma-orm","d"]
+0:["hu1rEVqeQ959Dx5sQpZVe",[[["",{"children":["blog",{"children":[["slug","creating-a-rest-api-with-hono-js-and-prisma-orm","d"],{"children":["__PAGE__?{\"slug\":\"creating-a-rest-api-with-hono-js-and-prisma-orm\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["slug","creating-a-rest-api-with-hono-js-and-prisma-orm","d"],{"children":["__PAGE__",{},[["$L1",["$","main",null,{"className":"flex justify-center w-full ","children":["$","article",null,{"className":"prose prose-sm sm:prose-base  dark:prose-invert w-full px-3 sm:px-0","children":[["$","img",null,{"src":"https://utfs.io/f/8d21b7e3-e60d-46d4-8eac-413630835436-8iebad.svg","className":"rounded-lg w-full aspect-video object-cover"}],["$","$L2",null,{"content":"$3"}]]}]}]],null],null]},["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/00412b0bf6df8839.css","precedence":"next","crossOrigin":"$undefined"}]]}],null]},["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[["$","html",null,{"lang":"en","children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/logo.svg"}],["$","link",null,{"rel":"mask-icon","href":"/logo.svg","color":"#000000"}]]}],["$","body",null,{"className":"min-h-screen bg-background font-sans antialiased __variable_7df6af","children":["$","$L7",null,{"attribute":"class","defaultTheme":"system","enableSystem":true,"disableTransitionOnChange":true,"children":[["$","$L8",null,{}],["$","main",null,{"className":"pt-20 min-h-screen","children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"z-20 w-full mt-6 p-4 border-t  shadow md:flex md:items-center md:justify-between md:p-6 bg-background","children":[["$","span",null,{"className":"text-sm text-gray-500 sm:text-center dark:text-gray-400","children":["© 2024 ",["$","a",null,{"href":"https://flowbite.com/","className":"hover:underline","children":"MMBlog"}],". All Rights Reserved."]}],["$","ul",null,{"className":"flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0","children":[["$","li",null,{"children":["$","a",null,{"href":"/about","className":"hover:underline me-4 md:me-6","children":"About"}]}],["$","li",null,{}],["$","li",null,{}]]}]]}]]}]}]]}],null],null],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/6bf988cd2fe52eb2.css","precedence":"next","crossOrigin":"$undefined"}]],"$L9"]]]]
+9:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"MMBlog  ⋅ Creating a REST API with HonoJS and Prisma ORM"}],["$","meta","3",{"name":"description","content":"Generated by create next app"}],["$","link","4",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]
+1:null

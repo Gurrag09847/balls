@@ -1,0 +1,128 @@
+2:I[2200,["746","static/chunks/746-92b327bb6f5043d2.js","308","static/chunks/app/blog/%5Bslug%5D/page-ae472e4be9c83056.js"],"default"]
+4:I[9275,[],""]
+6:I[1343,[],""]
+7:I[8546,["502","static/chunks/502-6cc24f17eb40f474.js","185","static/chunks/app/layout-9a90c48ce4220e65.js"],"ThemeProvider"]
+8:I[2775,["502","static/chunks/502-6cc24f17eb40f474.js","185","static/chunks/app/layout-9a90c48ce4220e65.js"],"default"]
+3:Teaa,
+# 10 Essential Tips for New Coders
+
+## Introduction
+
+Starting your coding journey can be both exciting and overwhelming. Whether you're diving into coding as a hobby, for a career change, or to enhance your current skill set, these essential tips will help guide you through the initial stages and set you up for success.
+
+## 1. Start with the Basics
+
+### Why It Matters
+
+Understanding the fundamental concepts of programming is crucial. These basics form the foundation upon which all advanced knowledge is built.
+
+### Action Steps
+
+- Choose a beginner-friendly language like Python or JavaScript.
+- Learn basic concepts such as variables, data types, loops, and functions.
+
+## 2. Practice Regularly
+
+### Why It Matters
+
+Coding is a skill best learned by doing. Regular practice helps reinforce concepts and improve problem-solving skills.
+
+### Action Steps
+
+- Dedicate a specific time each day for coding.
+- Use online platforms like LeetCode, HackerRank, or Codewars for daily challenges.
+
+## 3. Build Projects
+
+### Why It Matters
+
+Projects provide practical experience and help you understand how to apply what you've learned in real-world scenarios.
+
+### Action Steps
+
+- Start with small projects that interest you.
+- Gradually increase the complexity of your projects as you gain more confidence.
+
+## 4. Read Documentation
+
+### Why It Matters
+
+Documentation is a valuable resource for understanding how different programming languages and tools work.
+
+### Action Steps
+
+- Familiarize yourself with the official documentation of the language you are learning.
+- Use resources like MDN Web Docs for web development or Python's official documentation for Python.
+
+## 5. Join a Community
+
+### Why It Matters
+
+Being part of a community provides support, motivation, and opportunities to learn from others.
+
+### Action Steps
+
+- Join online forums like Stack Overflow, Reddit, or GitHub.
+- Attend local meetups, hackathons, or coding bootcamps.
+
+## 6. Debugging Skills
+
+### Why It Matters
+
+Debugging is an essential skill for identifying and fixing errors in your code.
+
+### Action Steps
+
+- Learn to use debugging tools and features in your chosen IDE.
+- Practice reading error messages and understanding what they mean.
+
+## 7. Learn Version Control
+
+### Why It Matters
+
+Version control systems like Git help you manage changes to your code and collaborate with others.
+
+### Action Steps
+
+- Learn basic Git commands and workflows.
+- Use platforms like GitHub or GitLab to host your repositories.
+
+## 8. Write Clean Code
+
+### Why It Matters
+
+Clean code is easier to read, maintain, and debug. It also makes it easier for others to understand your work.
+
+### Action Steps
+
+- Follow coding conventions and best practices.
+- Comment your code and use meaningful variable names.
+
+## 9. Stay Updated
+
+### Why It Matters
+
+The tech industry evolves rapidly. Staying updated ensures you are aware of the latest trends and tools.
+
+### Action Steps
+
+- Follow tech blogs, podcasts, and news sites.
+- Take online courses to learn new skills and technologies.
+
+## 10. Be Patient and Persistent
+
+### Why It Matters
+
+Learning to code is a marathon, not a sprint. Persistence and patience are key to overcoming challenges and setbacks.
+
+### Action Steps
+
+- Don't get discouraged by mistakes; view them as learning opportunities.
+- Celebrate small victories and milestones along the way.
+
+## Conclusion
+
+Embarking on your coding journey can be challenging, but with dedication and the right approach, it can also be incredibly rewarding. Keep these essential tips in mind as you progress, and you'll find yourself becoming a proficient coder in no time.5:["slug","10-essential-tips-for-new-coders","d"]
+0:["hu1rEVqeQ959Dx5sQpZVe",[[["",{"children":["blog",{"children":[["slug","10-essential-tips-for-new-coders","d"],{"children":["__PAGE__?{\"slug\":\"10-essential-tips-for-new-coders\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["blog",{"children":[["slug","10-essential-tips-for-new-coders","d"],{"children":["__PAGE__",{},[["$L1",["$","main",null,{"className":"flex justify-center w-full ","children":["$","article",null,{"className":"prose prose-sm sm:prose-base  dark:prose-invert w-full px-3 sm:px-0","children":[["$","img",null,{"src":"https://utfs.io/f/11078e5d-b612-419d-86a4-e9aac1b1cdcb-um6juf.svg","className":"rounded-lg w-full aspect-video object-cover"}],["$","$L2",null,{"content":"$3"}]]}]}]],null],null]},["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children","$5","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/00412b0bf6df8839.css","precedence":"next","crossOrigin":"$undefined"}]]}],null]},["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","blog","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","styles":null}],null]},[["$","html",null,{"lang":"en","children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/logo.svg"}],["$","link",null,{"rel":"mask-icon","href":"/logo.svg","color":"#000000"}]]}],["$","body",null,{"className":"min-h-screen bg-background font-sans antialiased __variable_7df6af","children":["$","$L7",null,{"attribute":"class","defaultTheme":"system","enableSystem":true,"disableTransitionOnChange":true,"children":[["$","$L8",null,{}],["$","main",null,{"className":"pt-20 min-h-screen","children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}],["$","footer",null,{"className":"z-20 w-full mt-6 p-4 border-t  shadow md:flex md:items-center md:justify-between md:p-6 bg-background","children":[["$","span",null,{"className":"text-sm text-gray-500 sm:text-center dark:text-gray-400","children":["© 2024 ",["$","a",null,{"href":"https://flowbite.com/","className":"hover:underline","children":"MMBlog"}],". All Rights Reserved."]}],["$","ul",null,{"className":"flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0","children":[["$","li",null,{"children":["$","a",null,{"href":"/about","className":"hover:underline me-4 md:me-6","children":"About"}]}],["$","li",null,{}],["$","li",null,{}]]}]]}]]}]}]]}],null],null],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/6bf988cd2fe52eb2.css","precedence":"next","crossOrigin":"$undefined"}]],"$L9"]]]]
+9:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"MMBlog  ⋅ 10 Essential Tips for New Coders"}],["$","meta","3",{"name":"description","content":"Generated by create next app"}],["$","link","4",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]
+1:null
